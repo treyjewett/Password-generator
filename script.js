@@ -39,7 +39,16 @@ if (cap != true && low != true && num != true && spec != true) {
 function generatePassword() {
   for (var i = 0; i < (passLength -1); i++) {
     while (true) {
-
+      randNum = (Math.floor(Math.random() * passLength) % 4);
+      if (randNum == 0 && cap) {
+        randNum = (Math.floor(Math.random() * 26) % 26);
+        password = password.concat(string.fromCharCode(capStart + randNum));
+      }
+      else if (randNum == 1 && low) {
+        
+      }
     }
   }
-}
+};
+
+return password;
