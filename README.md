@@ -26,7 +26,7 @@ When the Password Generator page is loaded:
 - The next 4 prompts ask yes or no (y / n) questions regarding what kind of characters they would like to include in the password.
 - The 4 categories are: capital letters, lower-case letters, numbers, and special characters.
 - If the user does not select any ("n" for all prompts), an error is shown and they are directed to start again.
-- If the prompts are followed correctly and the user specifies the character types as directed, a randomized password will be generated.
+- If the prompts are followed correctly and the user specifies the character types as directed, a randomized password will be generated at the desired length.
 - The user can then highlight the given password, copy it, and use it wherer they like.
 - The password generator will work again if the button is pressed, without having to re-load the page.
 

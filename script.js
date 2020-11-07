@@ -45,7 +45,7 @@ function generatePassword(password) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  for (var i = 0; i < (passLength - 1); i++) {
+  for (var i = 0; i < passLength; i++) {
     randNum = getRandomInt(4);
     if (randNum == 0 && cap == "y") {
       randNum = getRandomInt(26);
@@ -62,6 +62,9 @@ function generatePassword(password) {
     else if (randNum == 3 && spec == "y") {
       randNum = getRandomInt(special.length);
       password = password.concat(special[randNum]);
+    }
+    else {
+      i--;
     }
   }
   return password;
