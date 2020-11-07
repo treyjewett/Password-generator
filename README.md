@@ -22,7 +22,7 @@ When the Password Generator page is loaded:
 - A box centered on the page is present with the title: "Password Generator" and a sub-title: "Generate a Password".
 - The user is presented with a red button that reads: "Generate Password".
 - Upon clicking the button, the user is shown a prompt to specify how long the password should be (between 8 and 128 characters).
-- If the user enters a number outside of the constraints of the prompt, and error message is shown and they will be directed to try again.
+- If the user clicks cancel or enters a number outside of the constraints of the prompt, and error message is shown and they will be directed to try again.
 - The next 4 prompts ask yes or no (y / n) questions regarding what kind of characters they would like to include in the password.
 - The 4 categories are: capital letters, lower-case letters, numbers, and special characters.
 - If the user does not select any ("n" for all prompts), an error is shown and they are directed to start again.

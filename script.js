@@ -18,8 +18,8 @@ function generatePassword(password) {
   // Create the prompt for the user to set the length of the password.
   passLength = prompt("How long would you like your password to be? Please choose a number between 8 and 128.");
   if (passLength < 8 || passLength > 128) {
-    alert("Invalid number. Please enter a number between 8 and 128.");
-    generatePassword();
+    alert("Invalid number. Please enter a number between 8 and 128. Click Generate Password to try again.");
+    return;
   }
 
   // Creating the alerts for the user to tailor the password characters.
