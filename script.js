@@ -45,26 +45,27 @@ function generatePassword(password) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  for (var i = 0; i < passLength; i++) {
+  for (var i = 0; i < passLength;) {
     randNum = getRandomInt(4);
     if (randNum == 0 && cap == "y") {
       randNum = getRandomInt(26);
       password = password.concat(String.fromCharCode(capStart + randNum));
+      i++;
     }
     else if (randNum == 1 && low == "y") {
       randNum = getRandomInt(26);
       password = password.concat(String.fromCharCode(lowStart + randNum));
+      i++
     }
     else if (randNum == 2 && num == "y") {
       randNum = getRandomInt(10);
       password = password.concat(String.fromCharCode(numStart + randNum));
+      i++
     }
     else if (randNum == 3 && spec == "y") {
       randNum = getRandomInt(special.length);
       password = password.concat(special[randNum]);
-    }
-    else {
-      i--;
+      i++
     }
   }
   return password;
