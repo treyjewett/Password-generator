@@ -10,7 +10,7 @@ Passwords are becoming increasingly complicated. Between capital letters, number
 <img src="Assets\Images\password-generator.png" alt="Password Generator Website">
 <p>
 
-<a href="" target="_blank">Click here to view the website!</a>
+<a href="https://treyjewett.github.io/Password-generator/" target="_blank">Click here to view the website!</a>
 
 ## Code Utilized
 
