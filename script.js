@@ -6,11 +6,10 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  // var passwordGen = 
-  generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  let password = "";
+  var passwordText = document.querySelector("#password");
+  passwordText.value = generatePassword(password);
 }
 
 // Write the fuction that actually generates the password.
@@ -46,25 +45,23 @@ function generatePassword(password) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  for (var i = 0; i < (passLength -1); i++) {
-    while (true) {
-      randNum = getRandomInt(4);
-      if (randNum == 0 && cap == "y") {
-        randNum = getRandomInt(26);
-        password = password.concat(String.fromCharCode(capStart + randNum));
-      }
-      else if (randNum == 1 && low == "y") {
-        randNum = getRandomInt(26);
-        password = password.concat(String.fromCharCode(lowStart + randNum));
-      }
-      else if (randNum == 2 && num == "y") {
-        randNum = getRandomInt(10);
-        password = password.concat(String.fromCharCode(numStart + randNum));
-      }
-      else if (randNum == 3 && spec == "y") {
-        randNum = getRandomInt(special.length);
-        password = password.concat(special[randNum]);
-      }
+  for (var i = 0; i < (passLength - 1); i++) {
+    randNum = getRandomInt(4);
+    if (randNum == 0 && cap == "y") {
+      randNum = getRandomInt(26);
+      password = password.concat(String.fromCharCode(capStart + randNum));
+    }
+    else if (randNum == 1 && low == "y") {
+      randNum = getRandomInt(26);
+      password = password.concat(String.fromCharCode(lowStart + randNum));
+    }
+    else if (randNum == 2 && num == "y") {
+      randNum = getRandomInt(10);
+      password = password.concat(String.fromCharCode(numStart + randNum));
+    }
+    else if (randNum == 3 && spec == "y") {
+      randNum = getRandomInt(special.length);
+      password = password.concat(special[randNum]);
     }
   }
   return password;
