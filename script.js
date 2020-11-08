@@ -30,8 +30,8 @@ function generatePassword(password) {
 
   // If none of the character alerts are answered, send an error message.
   if (cap == "n" && low == "n" && num == "n" && spec == "n") {
-    alert("Error, no character selection. Please try again.")
-    generatePassword();
+    alert("Error, no character selection. Click Generate Password to try again.")
+    return;
   }
 
   // Create character possibilities using ACCII system.
